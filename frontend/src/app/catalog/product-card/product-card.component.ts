@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Product } from '../../models/product';
 
 @Component({
   selector: 'app-product-card',
@@ -9,16 +10,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class ProductCardComponent implements OnInit {
 
-  products = [{
-    productId: 1, 
-    productName: "Faber-Castell Jumbo Grip Silber",
-    productStock: 3, 
-    productDescription: "This is the best pencil ever. Grip wunderful. Much Wow. Such amazing", 
-    productImage: "../assets/images/pencil.png",
-    price: 2.99,
-    reviewID: [] 
-  
-  }]
+  @Input() product : Product;
 
   constructor() { }
 

@@ -8,7 +8,7 @@ ul{
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    width: 25vw; 
+    width: 23vw; 
     height: auto;
     border-radius: .5rem;
     box-shadow: 0 1px 2px 0 rgb(48 48 48 / 30%), 0 1px 3px 1px rgb(48 48 48 / 15%);
@@ -20,7 +20,7 @@ ul{
 }
 
 .product-description{
-    font-size: 0.5rem;
+    font-size: 0.8rem;
 }
 
 .product-price{
@@ -29,7 +29,7 @@ ul{
 }
 
 .product-img{
-    width: 20vw;
+    width: 19vw;
     margin-bottom: 0.5rem;
 }
 
@@ -40,7 +40,7 @@ ul{
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     .product-card{
         width: 45vw;
     }
