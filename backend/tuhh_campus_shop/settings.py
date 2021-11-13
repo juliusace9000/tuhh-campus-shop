@@ -75,9 +75,13 @@ WSGI_APPLICATION = 'tuhh_campus_shop.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'product': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'product_database',
+        'USER': 'product_user',
+        'PASSWORD': '0385836374034667',
+        'HOST': ' 85.214.58.239',
+        'PORT': '3306',
     }
 }
 
