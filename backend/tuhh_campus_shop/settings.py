@@ -74,6 +74,7 @@ WSGI_APPLICATION = 'tuhh_campus_shop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+##### Andrei
 DATABASES = {
     'product': {
         'ENGINE': 'django.db.backends.mysql',
@@ -84,7 +85,7 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-
+##### 
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
