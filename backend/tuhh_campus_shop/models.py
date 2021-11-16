@@ -2,18 +2,18 @@
 class ProductQuerySet(models.QuerySet):
 
     def Get_Price(self, productID):             
-        return self.filter(product_ID=productID).first().price         
+        return self.filter(product_id=productID).first().product_price         
 
     def Get_Product_Stock(self, productID):             
-        return self.filter(product_ID=productID).first().product_Stock    
+        return self.filter(product_id=productID).first().product_stock    
 #####
 
 ##### Yossef
     def Get_Product_Description(self, productID):
-        return self.filter(product_ID=productID).first().product_Description
+        return self.filter(product_id=productID).first().product_description
         
     def Get_Product_Picture_Path(self, productID):
-        return self.filter(product_ID=productID).first().picture_Path 
+        return self.filter(product_id=productID).first().picture_path 
 #####
 
 
