@@ -40,6 +40,8 @@ class Product(models.Model):
     product_price = models.PositiveIntegerField(db_column='product_Price', blank=True, null=True)  # Field name made lowercase.
     product_reviews = models.PositiveIntegerField(db_column='product_Reviews', blank=True, null=True)  # Field name made lowercase.
 
+    
+    product_manager = models.Manager()
     productQueryManager = ProductQuerySet.as_manager()
 	
     class Meta:
