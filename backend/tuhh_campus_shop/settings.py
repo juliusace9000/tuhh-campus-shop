@@ -76,12 +76,12 @@ WSGI_APPLICATION = 'tuhh_campus_shop.wsgi.application'
 
 ##### Andrei
 DATABASES = {
-    'product': {
+    'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'product_database',
         'USER': 'product_user',
         'PASSWORD': '0385836374034667',
-        'HOST': ' 85.214.58.239',
+        'HOST': '85.214.58.239',
         'PORT': '3306',
     }
 }
