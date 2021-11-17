@@ -3,6 +3,8 @@ from .forms import NewUserForm
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
+from rest_framework.parsers import JSONParser
+import io
 
 def register_request(request): #Julius
     if request.method == "POST":
@@ -30,3 +32,13 @@ def login_request(request): #julius
             else:
                 messages.error(request, "login was not successfull, \ninvalid username or password.")
         form = AuthenticationForm()
+        
+def catalog_request(request):
+    if request.method == 'POST':
+        json_data = request.body
+        stream = io.BytesIO(json_data)
+        python_data = JSONParser().parse(stream)
+        serializer = Catalog_request(data=python_data)
+        if serializer.is_valid():
+            serializer.save()
+            
