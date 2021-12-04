@@ -6,6 +6,17 @@ from django.contrib.auth.forms import AuthenticationForm
 from rest_framework.parsers import JSONParser
 import io
 
+
+def catalog_request(request):
+    if request.method == 'POST':
+        json_data = request.body
+        stream = io.BytesIO(json_data)
+        python_data = JSONParser().parse(stream)
+        serializer = Catalog_request(data=python_data)
+        if serializer.is_valid():
+            serializer.save()
+            #objekt der klasse catalogrequest?? wurde erzeugt, muss jetzt ausgeführt werden, antwort wird per httpresponse zurückgeschickt
+            
 def register_request(request): #Julius
     if request.method == "POST":
         form = NewUserForm(request.post)
@@ -33,12 +44,3 @@ def login_request(request): #julius
                 messages.error(request, "login was not successfull, \ninvalid username or password.")
         form = AuthenticationForm()
         
-def catalog_request(request):
-    if request.method == 'POST':
-        json_data = request.body
-        stream = io.BytesIO(json_data)
-        python_data = JSONParser().parse(stream)
-        serializer = Catalog_request(data=python_data)
-        if serializer.is_valid():
-            serializer.save()
-            
